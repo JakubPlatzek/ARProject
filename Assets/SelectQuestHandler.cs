@@ -6,7 +6,9 @@ using TMPro;
 
 public class SelectQuestHandler : MonoBehaviour
 {
+    public PlaceObject placeObject;
     public TMP_Dropdown dropdown;
+    public GameObject questMenu;
     public List<TMP_Dropdown.OptionData> options = new List<TMP_Dropdown.OptionData>();
 
     void Awake(){
@@ -15,6 +17,7 @@ public class SelectQuestHandler : MonoBehaviour
     }
 
     public void Evaluate(){
-        Debug.Log("Selected: " + dropdown.options[dropdown.value].text);
+        placeObject.objectToPlace = dropdown.options[dropdown.value].text;
+        questMenu.SetActive(false);
     }
 }
