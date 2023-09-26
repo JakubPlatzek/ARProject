@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public class SelectPlacementModeHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public ARPointCloudManager ARPointCloudManager;
+    public ARPlaneManager ARPlaneManager;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void SelectSpawnMode(){
+        if(this.gameObject.name.Equals("Free hand mode")){
+            ARPointCloudManager.enabled = false;
+            ARPlaneManager.enabled = true;
+        }else{
+            ARPointCloudManager.enabled = true;
+            ARPlaneManager.enabled = false;
+        }
+    } 
+
 }
