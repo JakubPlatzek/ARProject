@@ -613,6 +613,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left Fixed Joystick
       objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6577,6 +6582,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!114 &825689070 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1741638980440919382, guid: 6947f098cf463484a8e7aac45147adc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1431342195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd68ba5467e1154fbbc665383fe5ed5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &994769012
 GameObject:
   m_ObjectHideFlags: 0
@@ -7273,6 +7290,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Fixed Joystick
       objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252285020697097, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7440,6 +7467,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 678304772}
     m_Modifications:
+    - target: {fileID: 1074826042774409961, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741638980440919382, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: ManualMode
+      value: 
+      objectReference: {fileID: 132206344}
+    - target: {fileID: 1741638980440919382, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: ARPlaneManager
+      value: 
+      objectReference: {fileID: 1659859600}
+    - target: {fileID: 1741638980440919382, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: FreeHandPlacement
+      value: 
+      objectReference: {fileID: 1537545175}
+    - target: {fileID: 1741638980440919382, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: PlacementModeMenu
+      value: 
+      objectReference: {fileID: 1431342197}
+    - target: {fileID: 1741638980440919382, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: ARPointCloudManager
+      value: 
+      objectReference: {fileID: 1659859603}
     - target: {fileID: 4372144351957300074, guid: 6947f098cf463484a8e7aac45147adc3,
         type: 3}
       propertyPath: ManualMode
@@ -7450,6 +7507,11 @@ PrefabInstance:
       propertyPath: ARPlaneManager
       value: 
       objectReference: {fileID: 1659859600}
+    - target: {fileID: 4372144351957300074, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: FreeHandPlacement
+      value: 
+      objectReference: {fileID: 1537545175}
     - target: {fileID: 4372144351957300074, guid: 6947f098cf463484a8e7aac45147adc3,
         type: 3}
       propertyPath: PlacementModeMenu
@@ -7581,6 +7643,21 @@ PrefabInstance:
       value: SelectSpawnMode
       objectReference: {fileID: 0}
     - target: {fileID: 7944275937325800403, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SelectPlacementModeHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192299985210763025, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 825689070}
+    - target: {fileID: 9192299985210763025, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectSpawnMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192299985210763025, guid: 6947f098cf463484a8e7aac45147adc3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SelectPlacementModeHandler, Assembly-CSharp
@@ -8344,7 +8421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1537545176
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8381,7 +8458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftJoystick: {fileID: 2028786965}
   RightJoystick: {fileID: 1368874962}
-  PlaceLayoutButton: {fileID: 1904466649}
+  PlaceLayoutButton: {fileID: 1904466644}
   moveSpeed: 1
   raycastManager: {fileID: 1659859602}
 --- !u!1 &1600959268
@@ -9165,10 +9242,10 @@ RectTransform:
   - {fileID: 1436759626}
   m_Father: {fileID: 1537545176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 1011, y: -335}
-  m_SizeDelta: {x: 160, y: 160}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 700, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904466646
 MonoBehaviour:
@@ -9214,9 +9291,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 99acc6c4cac44f899490c5d776138d8a, type: 3}
-        m_TargetAssemblyTypeName: ManualPlacement, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1904466649}
+        m_TargetAssemblyTypeName: PlaceLayoutButton, Assembly-CSharp
+        m_MethodName: Press
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
