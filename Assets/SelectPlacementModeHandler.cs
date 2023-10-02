@@ -14,11 +14,13 @@ public class SelectPlacementModeHandler : MonoBehaviour
     public void SelectSpawnMode(){
         if(gameObject.name.Equals("Free hand mode")){
             FreeHandPlacement.SetActive(true);
+            ARPointCloudManager.enabled = false;
+            ARPlaneManager.enabled = true;
         } else {
+            ARPointCloudManager.enabled = true;
+            ARPlaneManager.enabled = false;
             ManualMode.SetActive(true);
         }
         PlacementModeMenu.SetActive(false);
-        ARPointCloudManager.enabled = true;
-        ARPlaneManager.enabled = false;
     }
 }

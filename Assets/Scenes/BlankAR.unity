@@ -8461,6 +8461,7 @@ MonoBehaviour:
   PlaceLayoutButton: {fileID: 1904466644}
   moveSpeed: 1
   raycastManager: {fileID: 1659859602}
+  arCamera: {fileID: 1354141930}
 --- !u!1 &1600959268
 GameObject:
   m_ObjectHideFlags: 0
@@ -9353,7 +9354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99acc6c4cac44f899490c5d776138d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressed: 0
 --- !u!1 &1925888888
 GameObject:
   m_ObjectHideFlags: 0

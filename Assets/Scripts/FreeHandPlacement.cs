@@ -57,18 +57,18 @@ public class FreeHandPlacement : MonoBehaviour
     private void placeLayoutPressed()
     {
         pressed = true;
-        PlaceLayoutButton.SetActive(false);
     }
 
     void InstantiateQuestResource()
     {
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
-        if (raycastManager.Raycast(new Vector2(0.5f, 0.5f), hits, TrackableType.FeaturePoint))
+        if (raycastManager.Raycast(new Vector2(0.5f, 0.5f), hits, TrackableType.Planes))
         {
             ARRaycastHit hit = hits[0];
             questPosition = hit.pose.position;
             quest = Instantiate(Resources.Load("Quest 1"), questPosition, hit.pose.rotation);
+            PlaceLayoutButton.SetActive(false);
         }
         else
         {
