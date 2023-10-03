@@ -89,7 +89,6 @@ public class FreeHandPlacement : MonoBehaviour
             ARRaycastHit hit = hits[0];
             questPosition = hit.pose.position;
             quest = Instantiate(Resources.Load(selectQuestHandler.placeObject.objectToPlace), questPosition, hit.pose.rotation);
-            PlaceLayoutButton.SetActive(false);
         }
         else
         {
