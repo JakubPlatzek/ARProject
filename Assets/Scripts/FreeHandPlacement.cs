@@ -1,41 +1,48 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Mime;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using Debug = UnityEngine.Debug;
 using Object = UnityEngine.Object;
 
+enum FreeHandState
+{
+    placeObject,
+    destroyObject
+}
+
 public class FreeHandPlacement : MonoBehaviour
 {
     public FixedJoystick LeftJoystick;
     public FixedJoystick RightJoystick;
-    public GameObject PlaceLayoutButton;
+    public GameObject RedButton;
     public float moveSpeed = 1f;
     public SelectQuestHandler selectQuestHandler;
     private Vector3 questPosition;
     public ARRaycastManager raycastManager;
     private Object quest;
-    private bool pressed = false;
-    
+    private bool createQuest = false;
+    private FreeHandState state = FreeHandState.placeObject;
+    public GameObject ExitButton;
+    public Text ButtonText;
     private void Start()
     {
         LeftJoystick.gameObject.SetActive(true);
         RightJoystick.gameObject.SetActive(true);
-        PlaceLayoutButton.gameObject.SetActive(true);
-        PlaceLayoutButton.GetComponent<Button>().onClick.AddListener(placeLayoutPressed);
+        RedButton.gameObject.SetActive(true);
+        ExitButton.SetActive(false);
+        RedButton.GetComponent<Button>().onClick.AddListener(buttonPressed);
     }
 
     public void Update()
     {
-        if (pressed && !quest)
-        {
-            pressed = false;
-            InstantiateQuestResource();
-        }
         Reposition();
     }
 
@@ -55,9 +62,22 @@ public class FreeHandPlacement : MonoBehaviour
     }
 
 
-    private void placeLayoutPressed()
+    private void buttonPressed()
     {
-        pressed = true;
+        if (state == FreeHandState.destroyObject)
+        {
+            Destroy(quest.GameObject());
+            quest = null;
+            RedButton.GetComponentInChildren<TextMeshProUGUI>().text = "Place \n Layout";
+            ExitButton.SetActive(false);
+            state = FreeHandState.placeObject;
+        }
+        else if (state == FreeHandState.placeObject) {
+            InstantiateQuestResource();
+            RedButton.GetComponentInChildren<TextMeshProUGUI>().text = "Remove \n Layout";
+            ExitButton.SetActive(true);
+            state = FreeHandState.destroyObject;
+        }
     }
 
     void InstantiateQuestResource()
@@ -69,7 +89,6 @@ public class FreeHandPlacement : MonoBehaviour
             ARRaycastHit hit = hits[0];
             questPosition = hit.pose.position;
             quest = Instantiate(Resources.Load(selectQuestHandler.placeObject.objectToPlace), questPosition, hit.pose.rotation);
-            PlaceLayoutButton.SetActive(false);
         }
         else
         {

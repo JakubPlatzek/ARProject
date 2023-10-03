@@ -6,10 +6,10 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ExitManualModeHandler : MonoBehaviour
 {
-    public GameObject ManualMode;
+    public GameObject PlacementMode;
     public ARPointCloudManager ARPointCloudManager;
+    public ARPlaneManager ARPlaneManager;
     public ManualPlacement manualPlacement;
-
     public GameObject MainMenuButton;
 
 
@@ -20,9 +20,13 @@ public class ExitManualModeHandler : MonoBehaviour
     }
 
     public void ExitManualMode(){
+        PlacementMode.SetActive(false);
         MainMenuButton.SetActive(true);
-        ManualMode.SetActive(false);
         ARPointCloudManager.enabled = false;
-        manualPlacement.tableCorners = new List<Vector3>();
+        ARPlaneManager.enabled = false;
+        if (manualPlacement)
+        {
+            manualPlacement.tableCorners = new List<Vector3>();   
+        }
     }
 }
