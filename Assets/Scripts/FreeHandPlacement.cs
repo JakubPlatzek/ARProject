@@ -24,6 +24,7 @@ public class FreeHandPlacement : MonoBehaviour
     public FixedJoystick RightJoystick;
     public GameObject RedButton;
     public float moveSpeed = 1f;
+    public SelectQuestHandler selectQuestHandler;
     private Vector3 questPosition;
     public ARRaycastManager raycastManager;
     private Object quest;
@@ -87,7 +88,8 @@ public class FreeHandPlacement : MonoBehaviour
         {
             ARRaycastHit hit = hits[0];
             questPosition = hit.pose.position;
-            quest = Instantiate(Resources.Load("Quest 1"), questPosition, hit.pose.rotation);
+            quest = Instantiate(Resources.Load(selectQuestHandler.placeObject.objectToPlace), questPosition, hit.pose.rotation);
+            PlaceLayoutButton.SetActive(false);
         }
         else
         {

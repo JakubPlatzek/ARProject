@@ -8763,6 +8763,7 @@ MonoBehaviour:
   RightJoystick: {fileID: 1368874962}
   RedButton: {fileID: 1904466644}
   moveSpeed: 1
+  selectQuestHandler: {fileID: 1494576914}
   raycastManager: {fileID: 1659859602}
   ExitButton: {fileID: 359668504}
   ButtonText: {fileID: 0}
