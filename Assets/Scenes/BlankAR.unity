@@ -6492,18 +6492,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714463683}
   m_CullTransparentMesh: 1
---- !u!114 &798000301 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4755638630319090523, guid: c6d8285478ffdf74aa27f7952a8f4536,
-    type: 3}
-  m_PrefabInstance: {fileID: 1090010292}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b55159b2c41324aa33959e78cd769d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &824266053
 GameObject:
   m_ObjectHideFlags: 0
@@ -6748,46 +6736,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 678304772}
     m_Modifications:
-    - target: {fileID: 2052146327085176518, guid: c6d8285478ffdf74aa27f7952a8f4536,
+    - target: {fileID: 393651088881263376, guid: c6d8285478ffdf74aa27f7952a8f4536,
         type: 3}
-      propertyPath: m_Name
-      value: Exit button
-      objectReference: {fileID: 0}
+      propertyPath: MainMenuButton
+      value: 
+      objectReference: {fileID: 114932424}
+    - target: {fileID: 393651088881263376, guid: c6d8285478ffdf74aa27f7952a8f4536,
+        type: 3}
+      propertyPath: ARPointCloudManager
+      value: 
+      objectReference: {fileID: 1659859603}
     - target: {fileID: 3080969696557717174, guid: c6d8285478ffdf74aa27f7952a8f4536,
         type: 3}
       propertyPath: m_Name
       value: Manual mode
-      objectReference: {fileID: 0}
-    - target: {fileID: 3080969696557717174, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4716214985482275483, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 796
-      objectReference: {fileID: 0}
-    - target: {fileID: 4716214985482275483, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -390
-      objectReference: {fileID: 0}
-    - target: {fileID: 4755638630319090523, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: pressed
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4755638630319090523, guid: c6d8285478ffdf74aa27f7952a8f4536,
         type: 3}
       propertyPath: ARCamera
       value: 
       objectReference: {fileID: 1354141926}
-    - target: {fileID: 4755638630319090523, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: canPress
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4755638630319090523, guid: c6d8285478ffdf74aa27f7952a8f4536,
         type: 3}
       propertyPath: m_RaycastManager
@@ -6798,68 +6766,6 @@ PrefabInstance:
       propertyPath: selectQuestHandler
       value: 
       objectReference: {fileID: 1494576914}
-    - target: {fileID: 6142777680120302054, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 6142777680120302054, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 6142777680120302054, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6142777680120302054, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6142777680120302054, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 816
-      objectReference: {fileID: 0}
-    - target: {fileID: 6142777680120302054, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 465
-      objectReference: {fileID: 0}
-    - target: {fileID: 6355591789606532124, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1090010295}
-    - target: {fileID: 6355591789606532124, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitManualMode
-      objectReference: {fileID: 0}
-    - target: {fileID: 6355591789606532124, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ExitManualModeHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6670725122714619479, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_text
-      value: 'Exit
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6670725122714619479, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6670725122714619479, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 18
-      objectReference: {fileID: 0}
     - target: {fileID: 7757137190870064387, guid: c6d8285478ffdf74aa27f7952a8f4536,
         type: 3}
       propertyPath: m_Pivot.x
@@ -6963,11 +6869,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2052146327085176518, guid: c6d8285478ffdf74aa27f7952a8f4536,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1090010295}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6d8285478ffdf74aa27f7952a8f4536, type: 3}
 --- !u!224 &1090010293 stripped
 RectTransform:
@@ -6975,28 +6877,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1090010292}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1090010294 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2052146327085176518, guid: c6d8285478ffdf74aa27f7952a8f4536,
-    type: 3}
-  m_PrefabInstance: {fileID: 1090010292}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1090010295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090010294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 362bfbd9a047841d68a203bc3668d959, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ManualMode: {fileID: 132206344}
-  ARPointCloudManager: {fileID: 1659859603}
-  manualPlacement: {fileID: 798000301}
-  MainMenuButton: {fileID: 114932424}
 --- !u!1 &1315038564
 GameObject:
   m_ObjectHideFlags: 0
