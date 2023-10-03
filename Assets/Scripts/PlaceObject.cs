@@ -14,16 +14,4 @@ public class PlaceObject : MonoBehaviour
     void Start(){
         m_RaycastManager = GetComponent<ARRaycastManager>();
     }
-
-    void Update()
-    {
-        // if(objectToPlace.Length > 0){
-        //     if (Input.touchCount > 0){
-        //         if(m_RaycastManager.Raycast(Input.GetTouch(0).position, m_Hits, TrackableType.PlaneWithinPolygon)){
-        //             Instantiate(Resources.Load(objectToPlace), m_Hits[0].pose.position, m_Hits[0].pose.rotation);
-        //         }
-        //     }
-        // }
-    }
-
 }
