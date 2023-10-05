@@ -78,7 +78,8 @@ public class ManualPlacement : MonoBehaviour
     }
 
     void PositionChosenQuestLayout(){
-        Instantiate(Resources.Load(selectQuestHandler.placeObject.objectToPlace), evaluatedPosition, Quaternion.LookRotation(evaluatedRotation));
+        GameObject prefab = Instantiate(Resources.Load(selectQuestHandler.placeObject.objectToPlace) as GameObject, evaluatedPosition, Quaternion.LookRotation(evaluatedRotation));
+        selectQuestHandler.placeObject.placedLayout = prefab;
     }
 
     public void Reset(){

@@ -7,6 +7,7 @@ using UnityEngine.XR.ARSubsystems;
 public class ExitManualModeHandler : MonoBehaviour
 {
     public GameObject PlacementMode;
+    public GameObject clearButton;
     public ARPointCloudManager ARPointCloudManager;
     public ARPlaneManager ARPlaneManager;
     public ManualPlacement manualPlacement;
@@ -20,6 +21,9 @@ public class ExitManualModeHandler : MonoBehaviour
     }
 
     public void ExitManualMode(){
+        if(PlacementMode.name.Equals("Free Hand Placement")){
+            clearButton.SetActive(true);
+        }
         PlacementMode.SetActive(false);
         MainMenuButton.SetActive(true);
         ARPointCloudManager.enabled = false;
