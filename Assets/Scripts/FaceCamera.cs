@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class FaceCamera : MonoBehaviour
 {
+
+    public GameObject gameObject;
     private Transform mainCameraTransform;
 
     private void Start()
