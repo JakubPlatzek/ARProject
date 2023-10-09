@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3695183715017929360}
   - component: {fileID: 7972606203049610339}
+  - component: {fileID: -4844798648661089454}
   m_Layer: 0
   m_Name: Quest 10
   m_TagString: Untagged
@@ -62,6 +63,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.75, y: 0.02, z: 0.75}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-4844798648661089454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459311079832692619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb6845e18eb4b3ba82029dca66ffdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupTextPrefab: {fileID: 902642484678888032, guid: dcc7d1f8f1f874d33931257e4e7997e7,
+    type: 3}
 --- !u!1001 &1027406461556699602
 PrefabInstance:
   m_ObjectHideFlags: 0
