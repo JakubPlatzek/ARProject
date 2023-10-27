@@ -83,9 +83,9 @@ public class objectDescription : MonoBehaviour
 
     private void CreateDescription(string text)
     {
-        const float DEFAULT_POS_ABOVE = 0.25f;
-        const float REDUCED_POS_ABOVE = 0.2f;
-        const float REDUCED_SCALE = 1f;
+        const float REDUCED_SCALE = 0.3f;
+        
+        Console.WriteLine("Input: " + text);
         
         if (isPopupActive && currentPopupInstance != null)
         {
@@ -94,14 +94,15 @@ public class objectDescription : MonoBehaviour
             return;
         }
         
-        float posAbove = text.Contains("tiles") ? DEFAULT_POS_ABOVE : REDUCED_POS_ABOVE;
-        Vector3 popupPosition = transform.position + Vector3.up * (transform.localScale.y / 2 + posAbove); // Position above the cube
+        Vector3 popupPosition = transform.position + Vector3.up * (transform.localScale.y / 2 + 0.05f); // Position above the cube
         currentPopupInstance = Instantiate(popupTextPrefab, popupPosition, Quaternion.identity);
 
-        if (!text.Contains("tiles"))
+        if (!text.Contains("Plague"))
         {
             Console.WriteLine("reducing");
             currentPopupInstance.transform.localScale *= REDUCED_SCALE; 
+            Vector3 newPosition = transform.position + Vector3.up * (currentPopupInstance.transform.localScale.y + 0.3f);
+            currentPopupInstance.transform.position = newPosition;
         }
         
         TextMeshPro textComponent = currentPopupInstance.transform.GetChild(1).GetComponent<TextMeshPro>();
