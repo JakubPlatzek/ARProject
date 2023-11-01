@@ -5842,11 +5842,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 362bfbd9a047841d68a203bc3668d959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlacementMode: {fileID: 1537545175}
+  FreePlacementMode: {fileID: 1537545175}
+  ManualMode: {fileID: 132206344}
   clearButton: {fileID: 2129945382}
   ARPointCloudManager: {fileID: 1659859603}
   ARPlaneManager: {fileID: 1659859600}
-  manualPlacement: {fileID: 0}
+  manualPlacement: {fileID: 661977492}
   MainMenuButton: {fileID: 114932424}
   ObjectsToUpdate:
   - {fileID: 114932429}
@@ -6329,6 +6330,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &661977492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4755638630319090523, guid: c6d8285478ffdf74aa27f7952a8f4536,
+    type: 3}
+  m_PrefabInstance: {fileID: 1090010292}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b55159b2c41324aa33959e78cd769d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &678304771
 GameObject:
   m_ObjectHideFlags: 0
@@ -7050,6 +7063,11 @@ PrefabInstance:
       propertyPath: MainMenuButton
       value: 
       objectReference: {fileID: 114932424}
+    - target: {fileID: 393651088881263376, guid: c6d8285478ffdf74aa27f7952a8f4536,
+        type: 3}
+      propertyPath: FreePlacementMode
+      value: 
+      objectReference: {fileID: 1537545175}
     - target: {fileID: 393651088881263376, guid: c6d8285478ffdf74aa27f7952a8f4536,
         type: 3}
       propertyPath: ARPointCloudManager

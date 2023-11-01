@@ -17,6 +17,7 @@ public class ManualPlacement : MonoBehaviour
     public bool canPress = true;
     public Camera ARCamera;
     public SelectQuestHandler selectQuestHandler;
+    public GameObject quest;
     List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
     List<GameObject> collectionPrefabs = new List<GameObject>();
     Vector3 evaluatedPosition = new Vector3();
@@ -80,12 +81,14 @@ public class ManualPlacement : MonoBehaviour
     void PositionChosenQuestLayout(){
         GameObject prefab = Instantiate(Resources.Load(selectQuestHandler.placeObject.objectToPlace) as GameObject, evaluatedPosition, Quaternion.LookRotation(evaluatedRotation));
         selectQuestHandler.placeObject.placedLayout = prefab;
+        quest = prefab;
     }
 
     public void Reset(){
         tableCorners.Clear();
         pressed = false;
         canPress = true;
+        quest = null;
         GetComponent<Button>().interactable = true;
         foreach(GameObject collectionPrefab in collectionPrefabs){
             Destroy(collectionPrefab);

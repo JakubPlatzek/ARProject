@@ -4,7 +4,8 @@ using UnityEngine.XR.ARFoundation;
 
 public class ExitManualModeHandler : MonoBehaviour
 {
-    public GameObject PlacementMode;
+    public GameObject FreePlacementMode;
+    public GameObject ManualMode;
     public GameObject clearButton;
     public ARPointCloudManager ARPointCloudManager;
     public ARPlaneManager ARPlaneManager;
@@ -20,13 +21,14 @@ public class ExitManualModeHandler : MonoBehaviour
     }
 
     public void ExitManualMode(){
-        if(PlacementMode.name.Equals("Free Hand Placement") && PlacementMode.GetComponent<FreeHandPlacement>().quest != null){
+        if(FreePlacementMode.GetComponent<FreeHandPlacement>().quest != null || manualPlacement.quest != null){
             clearButton.SetActive(true);
         }
         else{
             clearButton.SetActive(false);
         }
-        PlacementMode.SetActive(false);
+        FreePlacementMode.SetActive(false);
+        ManualMode.SetActive(false);
         MainMenuButton.SetActive(true);
         foreach (var item in ObjectsToUpdate)
         {
