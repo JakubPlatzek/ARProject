@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: CharactersReference
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5115721830144579445
+  m_GuidHigh: 578964409246268303
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5012762776492475111
+      m_GuidHigh: 2232032632127683741
+    m_SerializedTextureGuid:
+      m_GuidLow: 11670079966186870473
+      m_GuidHigh: 8124225155542942312
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Ann
+    m_Texture: {fileID: 2800000, guid: 04f896c973e6a1f468026e27bc0bbf70, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5341393646115762751
+      m_GuidHigh: 13811035893358937521
+    m_SerializedTextureGuid:
+      m_GuidLow: 7013405963491179864
+      m_GuidHigh: 12598334882482055195
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Baldric
+    m_Texture: {fileID: 2800000, guid: af7f7d589f9061541b68c1a7d346d6ae, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4896276038751674728
+      m_GuidHigh: 15763405043985335680
+    m_SerializedTextureGuid:
+      m_GuidLow: 16790632243707596817
+      m_GuidHigh: 9955224618526234825
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Clovis
+    m_Texture: {fileID: 2800000, guid: a86950114f10e904c9d87aa60b10288a, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4960224608556900139
+      m_GuidHigh: 9143428481176200358
+    m_SerializedTextureGuid:
+      m_GuidLow: 13241959104152625835
+      m_GuidHigh: 3571575947319918297
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Nelly
+    m_Texture: {fileID: 2800000, guid: 754462abe3a5b7c4d93e55ac66c99031, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4800985486823642707
+      m_GuidHigh: 6246451348866503080
+    m_SerializedTextureGuid:
+      m_GuidLow: 2334003430595559357
+      m_GuidHigh: 5931859949011449529
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Samson
+    m_Texture: {fileID: 2800000, guid: 0930ffbd0bc12064b9b631fe31335252, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5730781002724360364
+      m_GuidHigh: 15631712955742533305
+    m_SerializedTextureGuid:
+      m_GuidLow: 11868215233862978663
+      m_GuidHigh: 9314732248401251081
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Silas
+    m_Texture: {fileID: 2800000, guid: ec484c675edfa4b4090bd5dba0934481, type: 3}
