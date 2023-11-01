@@ -1,13 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CloseButtonHandler : MonoBehaviour
 {
     public GameObject ObjectToClose;
-    public HandleMenu ObjectToUpdate;
+    public List<HandleMenu> ObjectsToUpdate;
     public void CloseMenu(){
         ObjectToClose.SetActive(false);
-        ObjectToUpdate.isMenuOpen = false;
+        foreach (var item in ObjectsToUpdate)
+        {
+            item.isMenuOpen = false;
+        }
     }
 }

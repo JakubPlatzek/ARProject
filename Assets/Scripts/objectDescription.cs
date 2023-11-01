@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
-public class objectDescription : MonoBehaviour
+public class ObjectDescription : MonoBehaviour
 {
     private ARRaycastManager raycastManager;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();

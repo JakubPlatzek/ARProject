@@ -27,17 +27,13 @@ public class FreeHandPlacement : MonoBehaviour
     public SelectQuestHandler selectQuestHandler;
     private Vector3 questPosition;
     public ARRaycastManager raycastManager;
-    private Object quest;
-    private bool createQuest = false;
+    public Object quest;
     private FreeHandState state = FreeHandState.placeObject;
-    public GameObject ExitButton;
-    public Text ButtonText;
     private void Start()
     {
         LeftJoystick.gameObject.SetActive(true);
         RightJoystick.gameObject.SetActive(true);
         RedButton.gameObject.SetActive(true);
-        ExitButton.SetActive(false);
         RedButton.GetComponent<Button>().onClick.AddListener(buttonPressed);
     }
 
@@ -69,13 +65,11 @@ public class FreeHandPlacement : MonoBehaviour
             Destroy(quest.GameObject());
             quest = null;
             RedButton.GetComponentInChildren<TextMeshProUGUI>().text = "Place \n Layout";
-            ExitButton.SetActive(false);
             state = FreeHandState.placeObject;
         }
         else if (state == FreeHandState.placeObject) {
             InstantiateQuestResource();
             RedButton.GetComponentInChildren<TextMeshProUGUI>().text = "Remove \n Layout";
-            ExitButton.SetActive(true);
             state = FreeHandState.destroyObject;
         }
     }

@@ -315,7 +315,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectToClose: {fileID: 714463683}
-  ObjectToUpdate: {fileID: 114932429}
+  ObjectsToUpdate:
+  - {fileID: 1925888893}
+  - {fileID: 114932429}
 --- !u!114 &7513640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5846,6 +5848,9 @@ MonoBehaviour:
   ARPlaneManager: {fileID: 1659859600}
   manualPlacement: {fileID: 0}
   MainMenuButton: {fileID: 114932424}
+  ObjectsToUpdate:
+  - {fileID: 114932429}
+  - {fileID: 1925888893}
 --- !u!114 &359668507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7027,6 +7032,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 393651088881263376, guid: c6d8285478ffdf74aa27f7952a8f4536,
         type: 3}
+      propertyPath: clearButton
+      value: 
+      objectReference: {fileID: 2129945382}
+    - target: {fileID: 393651088881263376, guid: c6d8285478ffdf74aa27f7952a8f4536,
+        type: 3}
       propertyPath: PlacementMode
       value: 
       objectReference: {fileID: 132206344}
@@ -7045,6 +7055,21 @@ PrefabInstance:
       propertyPath: ARPointCloudManager
       value: 
       objectReference: {fileID: 1659859603}
+    - target: {fileID: 393651088881263376, guid: c6d8285478ffdf74aa27f7952a8f4536,
+        type: 3}
+      propertyPath: ObjectsToUpdate.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 393651088881263376, guid: c6d8285478ffdf74aa27f7952a8f4536,
+        type: 3}
+      propertyPath: ObjectsToUpdate.Array.data[0]
+      value: 
+      objectReference: {fileID: 114932429}
+    - target: {fileID: 393651088881263376, guid: c6d8285478ffdf74aa27f7952a8f4536,
+        type: 3}
+      propertyPath: ObjectsToUpdate.Array.data[1]
+      value: 
+      objectReference: {fileID: 1925888893}
     - target: {fileID: 2052146327085176518, guid: c6d8285478ffdf74aa27f7952a8f4536,
         type: 3}
       propertyPath: m_Name
@@ -7333,7 +7358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectToClose: {fileID: 1611210246}
-  ObjectToUpdate: {fileID: 1925888893}
+  ObjectsToUpdate: []
 --- !u!1 &1354141925
 GameObject:
   m_ObjectHideFlags: 0
@@ -7806,6 +7831,26 @@ PrefabInstance:
       propertyPath: ARPointCloudManager
       value: 
       objectReference: {fileID: 1659859603}
+    - target: {fileID: 1892654675958239831, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: ObjectToUpdate
+      value: 
+      objectReference: {fileID: 1925888893}
+    - target: {fileID: 1892654675958239831, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: ObjectsToUpdate.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892654675958239831, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: ObjectsToUpdate.Array.data[0]
+      value: 
+      objectReference: {fileID: 114932429}
+    - target: {fileID: 1892654675958239831, guid: 6947f098cf463484a8e7aac45147adc3,
+        type: 3}
+      propertyPath: ObjectsToUpdate.Array.data[1]
+      value: 
+      objectReference: {fileID: 1925888893}
     - target: {fileID: 4372144351957300074, guid: 6947f098cf463484a8e7aac45147adc3,
         type: 3}
       propertyPath: ManualMode
@@ -8772,8 +8817,7 @@ MonoBehaviour:
   moveSpeed: 1
   selectQuestHandler: {fileID: 1494576914}
   raycastManager: {fileID: 1659859602}
-  ExitButton: {fileID: 359668504}
-  ButtonText: {fileID: 0}
+  quest: {fileID: 0}
 --- !u!1 &1600959268
 GameObject:
   m_ObjectHideFlags: 0
@@ -9075,6 +9119,8 @@ MonoBehaviour:
   - {fileID: 5468608788390696005, guid: 69f9820c2be5d420181f4c15d49458ee, type: 3}
   - {fileID: 1083442814068288935, guid: 16949d4383b0f4222958894433ff65d4, type: 3}
   - {fileID: 3924303299537022515, guid: bb8473b78bbe84c87822de1847dc5008, type: 3}
+  refImageCount: 0
+  arTrackedImageManager: {fileID: 0}
 --- !u!114 &1659859606
 MonoBehaviour:
   m_ObjectHideFlags: 0
